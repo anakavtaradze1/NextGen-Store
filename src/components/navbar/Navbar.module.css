@@ -13,5 +13,11 @@
 .activeTab {
   text-decoration: underline;
   color: #082894;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 20px;
+}
+.inactiveTab {
+  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
 }

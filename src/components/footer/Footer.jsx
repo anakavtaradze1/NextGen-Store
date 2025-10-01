@@ -7,13 +7,13 @@ function Footer() {
       <nav>
         <ul>
           <li>
-            <Link href="">Conditions of Use</Link>
+            <Link href="#">Conditions of Use</Link>
           </li>
           <li>
-            <Link href="">Privacy Notice</Link>
+            <Link href="#">Privacy Notice</Link>
           </li>
           <li>
-            <Link href="">Interest-Based Ads</Link>
+            <Link href="#">Interest-Based Ads</Link>
           </li>
         </ul>
       </nav>

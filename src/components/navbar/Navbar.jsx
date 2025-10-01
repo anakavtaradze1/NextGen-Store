@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 const links = [
-  { name: "Products", url: " /", id: 1 },
+  { name: "Products", url: "/", id: 1 },
   { name: "Cart", url: "/cart", id: 2 },
   { name: "Profile", url: "/profile", id: 3 },
 ];
