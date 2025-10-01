@@ -46,7 +46,7 @@ function ProductDetailsPage() {
   if (loading) {
     return (
       <div className={styles.container}>
-        <div className={styles.loading}>Loading product details...</div>
+        <h2 className={styles.loading}>Loading product details...</h2>
       </div>
     );
   }

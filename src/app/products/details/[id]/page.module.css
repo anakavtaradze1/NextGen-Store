@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 50px auto;
 }
-.loading {
+.loading, .error {
   text-align: center;
   padding: 60px 20px;
   font-size: 20px;
@@ -40,7 +40,6 @@
   color: #0e0e0e;
   margin-bottom: 20px;
 }
-
 .ratingSection {
   margin-bottom: 20px;
 }
