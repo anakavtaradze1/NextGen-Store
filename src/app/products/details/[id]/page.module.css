@@ -1,0 +1,124 @@
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 20px;
+  color: #6c757d;
+}
+.productDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.productImage {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.category {
+  display: inline-block;
+  background: #e9ecef;
+  color: #495057;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0e0e0e;
+  margin-bottom: 20px;
+}
+
+.ratingSection {
+  margin-bottom: 20px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.starsContainer {
+  position: relative;
+  font-size: 18px;
+}
+.starsBackground {
+  color: #e9ecef;
+  letter-spacing: 1.2px;
+}
+.starsFilled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffc107;
+  letter-spacing: 1.2px;
+  overflow: hidden;
+}
+.ratingText {
+  font-size: 15px;
+  color: #6c757d;
+  font-weight: 500;
+}
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #28a745;
+  margin-bottom: 25px;
+}
+.description h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 15px;
+}
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #495057;
+}
+.cartButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.2s ease;
+}
+.cartButton:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 15px;
+  }
+  .productDetails {
+    grid-template-columns: 1fr;
+  }
+  .productImage {
+    width: 100%;
+    max-height: 300px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .cartButton {
+    width: 100%;
+  }
+}

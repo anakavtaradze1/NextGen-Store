@@ -1,0 +1,17 @@
+.headerContainer {
+  background-color: #082894;
+  padding: 1rem;
+}
+.headerNav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fefefe;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.activeTab {
+  text-decoration: underline;
+  color: #082894;
+  font-weight: bold;
+}
