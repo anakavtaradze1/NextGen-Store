@@ -2,11 +2,12 @@
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
-  { name: "Products", url: "/", id: 1 },
-  { name: "Cart", url: "/cart", id: 2 },
-  { name: "Profile", url: "/profile", id: 3 },
+  { name: "Products", url: "/", icon: "/order.png", id: 1 },
+  { name: "Cart", url: "/cart", icon: "/shopping-cart.png", id: 2 },
+  { name: "Profile", url: "/profile", icon: "/user.png", id: 3 },
 ];
 
 const Navbar = () => {
@@ -24,6 +25,13 @@ const Navbar = () => {
                   : styles.inactiveTab
               }
             >
+              <Image
+                src={link.icon}
+                alt="icon"
+                width={25}
+                height={25}
+                className={styles.icon}
+              />
               {link.name}
             </div>
           </Link>
