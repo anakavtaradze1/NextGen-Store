@@ -20,7 +20,8 @@ const Navbar = () => {
           <Link key={link.id} href={link.url}>
             <div
               className={
-                pathname.slice(1) === link.url.slice(1)
+                (link.name === "Products" && (pathname === "/" || pathname === "/products")) ||
+                pathname === link.url
                   ? styles.activeTab
                   : styles.inactiveTab
               }
