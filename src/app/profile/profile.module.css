@@ -1,0 +1,107 @@
+.profileContainer {
+  max-width: 800px;
+  margin: 50px auto;
+  background: linear-gradient(#f8f8fa, #dcebfc);
+  border-radius: 20px;
+  box-shadow: 0 20px 20px rgba(148, 201, 238, 0.3);
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.profileContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+.profileImage {
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  outline: 8px solid rgba(102, 126, 234, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+.profileImage:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  outline: 8px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(226, 232, 240, 0.8);
+}
+.profileTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #010101;
+}
+.profileLabel {
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  min-width: 80px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.profileInfo {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.profileInfo:hover {
+  background: rgba(102, 126, 234, 0.03);
+  padding: 10px;
+  transform: translateX(5px);
+}
+.profileAddress {
+  background: linear-gradient(#f1f5f9, #edf1f7);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.profileAddress:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.profileAddress div {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+  .profileTitle {
+    font-size: 2rem;
+  }
+  .profileInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}

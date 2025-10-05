@@ -1,0 +1,26 @@
+.headerContainer {
+  background-color: #082894;
+  padding: 1rem;
+}
+.headerNav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fefefe;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.activeTab {
+  text-decoration: underline;
+  color: #082894;
+  font-weight: 600;
+  font-size: 20px;
+}
+.inactiveTab {
+  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+}
+.icon {
+  margin-right: 10px;
+}

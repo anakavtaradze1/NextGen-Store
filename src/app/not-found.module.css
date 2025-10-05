@@ -1,0 +1,97 @@
+.notFoundContainer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f8fa 0%, #dcebfc 100%);
+  overflow: hidden;
+}
+.notFoundBox {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(34, 93, 136, 0.3);
+  padding: 60px 40px;
+  border: 5px solid rgba(10, 20, 89, 0.2);
+  animation: fadeIn 0.6s ease-out;
+}
+.errorCode {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #764ba2;
+}
+.errorTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 20px 0;
+}
+.errorMessage {
+  font-size: 1.5rem;
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.homeButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  position: relative;
+}
+.homeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+.homeButton:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .notFoundBox {
+    margin: 0 10px;
+  }
+  .errorCode {
+    font-size: 4rem;
+  }
+  .errorTitle {
+    font-size: 2rem;
+  }
+  .errorMessage {
+    font-size: 1.2rem;
+  }
+  .homeButton {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

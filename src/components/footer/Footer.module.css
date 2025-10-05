@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  color: #000000;
+}
+.footer div {
+  font-size: 1rem;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .footer ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
