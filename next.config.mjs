@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/nextgen-store",
-  assetPrefix: "/nextgen-store",
   images: {
     remotePatterns: [
       {
