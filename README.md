@@ -1,6 +1,6 @@
 # NextGen Store
 
-NextGen Store is a modern, full-featured e-commerce front-end built with Next.js and React. It provides a seamless shopping experience, allowing users to browse products, add items to a cart, and manage their profile. The project leverages the power of Next.js for a fast, server-rendered application.
+NextGen Store is a front-end project that showcases a modern e-commerce user experience. Built with Next.js and React, it provides a seamless interface for users to browse products, view item details, and manage a shopping cart. This project focuses on building a responsive and interactive UI using the Next.js App Router and modern React principles.
 
 ## Key Features
 
@@ -49,5 +49,4 @@ To get a local copy up and running, follow these simple steps.
 ![Product details page](/public/screenshot-2.png)
 
 ### Shopping Cart
-
 ![Shopping cart page](/public/screenshot-3.png)
