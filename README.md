@@ -43,10 +43,11 @@ To get a local copy up and running, follow these simple steps.
 ## Screenshots
 
 ### Main Products Page
-![Main products page](/screenshot-1.png)
+![Main products page](/public/screenshot-1.png)
 
 ### Product Details Page
-![Product details page](/screenshot-2.png)
+![Product details page](/public/screenshot-2.png)
 
 ### Shopping Cart
-![Shopping cart page](/screenshot-3.png)
+
+![Shopping cart page](/public/screenshot-3.png)
