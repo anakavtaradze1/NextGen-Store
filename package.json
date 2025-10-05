@@ -2,6 +2,7 @@
   "name": "midterm",
   "version": "0.1.0",
   "private": true,
+  "root":"/nextgen-store",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,3 +20,4 @@
     "@eslint/eslintrc": "^3"
   }
 }
+
