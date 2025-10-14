@@ -27,6 +27,14 @@ body {
   flex-direction: column;
 }
 
+button,
+input,
+a,
+select,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

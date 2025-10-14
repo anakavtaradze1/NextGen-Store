@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const schema = yup.object().shape({
   id: yup
@@ -47,6 +48,10 @@ const Register = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
 
   const handleRegister = async (data) => {
     try {

@@ -7,6 +7,7 @@ function CartPage() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
+    document.title = "Shopping Cart";
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((result) => {

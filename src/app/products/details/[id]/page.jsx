@@ -24,6 +24,7 @@ function ProductDetailsPage() {
   };
 
   useEffect(() => {
+    document.title = "Product Details";
     getSingleProduct();
   }, []);
 

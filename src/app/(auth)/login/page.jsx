@@ -26,6 +26,7 @@ const schema = yup.object().shape({
 const Login = () => {
   const router = useRouter();
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
 
   const {
     register,
@@ -37,6 +38,7 @@ const Login = () => {
   });
 
   useEffect(() => {
+    document.title = "Login";
     setFocus("username");
   }, [setFocus]);
 
@@ -54,7 +56,9 @@ const Login = () => {
       const result = await response.json();
 
       if (result?.token) {
-        localStorage.setItem("token", JSON.stringify(result.token));
+        if (rememberMe) {
+          localStorage.setItem("token", JSON.stringify(result.token));
+        }
         router.push("/products");
       }
     } catch (error) {
@@ -81,11 +85,6 @@ const Login = () => {
                 className={styles.input}
                 placeholder="Enter your username"
               />
-              <button
-                type="button"
-                className={styles.togglePassword}
-                onClick={() => setPasswordVisible(!passwordVisible)}
-              ></button>
             </div>
             {errors.username && (
               <span className={styles.errorMessage}>
@@ -120,6 +119,18 @@ const Login = () => {
                 {errors.password.message}
               </span>
             )}
+          </div>
+
+          <div className={styles.rememberMeContainer}>
+            <label className={styles.rememberMeLabel}>
+              <input
+                type="checkbox"
+                className={styles.rememberMeCheckbox}
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
+              Remember Me
+            </label>
           </div>
 
           <button className={styles.submitButton} type="submit">

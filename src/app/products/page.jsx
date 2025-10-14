@@ -7,6 +7,7 @@ function ProductPage() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    document.title = "Products";
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((result) => {

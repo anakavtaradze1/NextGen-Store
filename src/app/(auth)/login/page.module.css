@@ -124,7 +124,13 @@
   color: #764ba2;
   transform: translateY(-2px);
 }
-.checkboxLabel {
+.rememberMeContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  margin-left: 0.5rem;
+}
+.rememberMeLabel {
   display: flex;
   align-items: center;
   font-size: 1rem;
@@ -132,17 +138,17 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 1.5rem;
 }
-.checkboxLabel:hover {
+.rememberMeLabel:hover {
   color: #667eea;
 }
-.checkbox {
+.rememberMeCheckbox {
   margin-right: 0.5rem;
   width: 18px;
   height: 18px;
   accent-color: #667eea;
   cursor: pointer;
+  border-radius: 5px;
 }
 .inputWrapper {
   display: flex;
