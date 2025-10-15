@@ -1,51 +1,50 @@
 "use client";
-import { useState, useEffect } from "react";
-import CartItem from "../../components/cartItem/CartItem";
-import styles from "./page.module.css";
 
-function CartPage() {
-  const [cartItems, setCartItems] = useState([]);
+import { useEffect } from "react";
+import { useAppSelector } from "@/lib/hooks";
+import CartItem from "@/components/cartItem/CartItem";
+import styles from "./page.module.css";
+import {
+  selectCartProducts,
+  selectTotalQuantity,
+  selectTotalAmount,
+} from "@/lib/slices/cartSlice";
+
+function page() {
+  const cartProducts = useAppSelector(selectCartProducts);
+  const totalQuantity = useAppSelector(selectTotalQuantity);
+  const totalAmount = useAppSelector(selectTotalAmount);
 
   useEffect(() => {
     document.title = "Shopping Cart";
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((result) => {
-        setCartItems(result);
-      });
   }, []);
 
-  const handleRemoveItem = (productId) => {
-    setCartItems(cartItems.filter((item) => item.id !== productId));
-  };
-
   return (
-    <main className={styles.container}>
+    <div className={styles.cartContainer}>
       <h1 className={styles.title}>Shopping Cart</h1>
+      {cartProducts.length === 0 ? (
+        <p className={styles.emptyCart}>Your cart is empty</p>
+      ) : (
+        <>
+          <div className={styles.cartItems}>
+            {cartProducts.map((product) => (
+              <CartItem key={product.id} product={product} />
+            ))}
+          </div>
 
-      <div className={styles.cartHeader}>
-        <h2 className={styles.productHeader}>PRODUCT</h2>
-        <h2 className={styles.quantityHeader}>QUANTITY</h2>
-        <h2 className={styles.priceHeader}>PRICE</h2>
-      </div>
-
-      <div className={styles.cartItems}>
-        {cartItems.map((product) => (
-          <CartItem
-            key={product.id}
-            product={product}
-            onRemove={handleRemoveItem}
-          />
-        ))}
-      </div>
-
-      {cartItems.length === 0 && (
-        <div className={styles.emptyCart}>
-          <p>Your cart is empty</p>
-        </div>
+          <div className={styles.totalSection}>
+            <div className={styles.totalItem}>
+              <span className={styles.totalLabel}>Total Items:</span>
+              <span className={styles.totalValue}>{totalQuantity} items</span>
+            </div>
+            <div className={styles.totalAmount}>
+              <h2>Total Amount: ${totalAmount.toFixed(2)}</h2>
+            </div>
+          </div>
+        </>
       )}
-    </main>
+    </div>
   );
 }
 
-export default CartPage;
+export default page;

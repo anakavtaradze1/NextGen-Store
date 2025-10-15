@@ -2,12 +2,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import styles from "./page.module.css";
+import { addToCart } from "@/lib/slices/cartSlice";
+import { useAppDispatch } from "@/lib/hooks";
 
 function ProductDetailsPage() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const params = useParams();
+  const dispatch = useAppDispatch();
 
   const getSingleProduct = async () => {
     try {
@@ -27,6 +30,10 @@ function ProductDetailsPage() {
     document.title = "Product Details";
     getSingleProduct();
   }, []);
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
 
   const renderStars = (rating) => {
     const percentage = (rating / 5) * 100;
@@ -91,7 +98,9 @@ function ProductDetailsPage() {
             <p>{product.description}</p>
           </div>
 
-          <button className={styles.cartButton}>Add to Cart</button>
+          <button className={styles.cartButton} onClick={handleAddToCart}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </section>

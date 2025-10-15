@@ -91,20 +91,41 @@
 .inactiveTab:hover::after {
   width: 80%;
 }
-.icon {
+.iconContainer {
+  position: relative;
+  display: inline-block;
   margin-right: 10px;
+}
+
+.icon {
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .activeTab .icon {
   animation: iconBounce 2s ease-in-out infinite;
 }
 
- .inactiveTab:hover .icon {
+.inactiveTab:hover .icon {
   transform: scale(1.15) rotate(10deg);
   filter: drop-shadow(0 3px 8px rgba(8, 40, 148, 0.3));
 }
-
 
 @keyframes iconBounce {
   100% {
@@ -117,7 +138,6 @@
     transform: translateY(-1px);
   }
 }
-
 
 @media (max-width: 768px) {
   .headerContainer {
@@ -137,9 +157,12 @@
     min-width: 70px;
     text-align: center;
   }
-  .icon {
+  .iconContainer {
     margin-right: 0;
     margin-bottom: 4px;
+  }
+
+  .icon {
     width: 20px;
     height: 20px;
   }
