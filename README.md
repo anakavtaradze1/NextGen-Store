@@ -9,8 +9,6 @@
 
 _A modern, responsive e-commerce application built with Next.js and Redux Toolkit_
 
-[🌟 Live Demo](http://localhost:3000) • [📚 Documentation](#documentation) • [🚀 Features](#features)
-
 </div>
 
 ---
@@ -143,39 +141,6 @@ Make sure you have the following installed:
 
 ---
 
-## 📊 Redux Store Structure
-
-```javascript
-store: {
-  cart: {
-    cartProducts: [
-      {
-        id: number,
-        title: string,
-        price: number,
-        image: string,
-        quantity: number,
-        // ... other product properties
-      },
-    ];
-  }
-}
-```
-
-### Cart Actions
-
-- `addToCart(product)` - Add product or increase quantity
-- `increaseQuantity({id})` - Increase specific item quantity
-- `decreaseQuantity({id})` - Decrease quantity (removes if 1)
-- `deleteFromCart({id})` - Remove item completely
-
-### Selectors
-
-- `selectCartProducts` - Get all cart items
-- `selectTotalQuantity` - Calculate total item count
-- `selectTotalAmount` - Calculate total price
-
----
 
 ## 🎯 Key Features Implemented
 
@@ -201,21 +166,6 @@ store: {
 
 ---
 
-## 🌟 Screenshots
-
-### 🏠 Home Page (Products)
-
-Beautiful product grid with hover effects and star ratings
-
-### 🛒 Shopping Cart
-
-Clean cart interface with quantity controls and real-time totals
-
-### 📱 Responsive Design
-
-Optimized for desktop, tablet, and mobile devices
-
----
 
 ## 🤝 Contributing
 
@@ -227,11 +177,6 @@ Optimized for desktop, tablet, and mobile devices
 
 ---
 
-## 📝 License
-
-This project is created for educational purposes.
-
----
 
 ## 👨‍💻 Developer
 
