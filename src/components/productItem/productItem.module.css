@@ -1,10 +1,11 @@
 .productCard {
   background: #f8f9fa;
+  border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.2s ease;
   cursor: pointer;
-  width: 250px;
+  width: 300px;
   height: 380px;
   margin-bottom: 20px;
 }
@@ -77,5 +78,8 @@
 .currentPrice {
   font-size: 25px;
   font-weight: 700;
-  color: #212529;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

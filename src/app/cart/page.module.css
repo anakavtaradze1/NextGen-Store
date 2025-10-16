@@ -1,55 +1,68 @@
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f8f9fa;
+.cartContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 .title {
-  font-size: 2.5rem;
-  font-weight: 500;
-  color: #6c757d;
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 2rem;
-  letter-spacing: 1.5px;
-}
-.cartHeader {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr auto;
-  gap: 50px;
-  padding: 15px 20px;
-  border-bottom: 2px solid #dee2e6;
-}
-.productHeader,
-.quantityHeader,
-.priceHeader {
-  font-size: 15px;
-  font-weight: 600;
-  color: #6c757d;
-  letter-spacing: 0.5px;
-}
-.quantityHeader,
-.priceHeader {
-  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 5px rgba(118, 75, 162, 0.3);
 }
 .emptyCart {
   text-align: center;
-  padding: 60px 20px;
-  background: white;
+  font-size: 1.5rem;
+  color: #666;
+  margin: 3rem 0;
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.totalSection {
+  border-top: 3px solid #667eea;
+  padding-top: 1.5rem;
+  text-align: right;
+  background: rgba(239, 232, 247, 0.3);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
-.emptyCart p {
-  font-size: 20px;
-  color: #6c757d;
+.totalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #dee2e6;
 }
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-  .cartHeader {
-    display: none;
-  }
+.totalLabel {
+  font-size: 1.2rem;
+  color: #495057;
+  font-weight: 600;
+}
+.totalValue {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.totalAmount h2 {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,20 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 import styles from "./CartItem.module.css";
 import Image from "next/image";
+import {
+  increaseQuantity,
+  decreaseQuantity,
+  deleteFromCart,
+} from "../../lib/slices/cartSlice";
 
-function CartItem({ product, onRemove }) {
-  const [quantity, setQuantity] = useState(1);
+function CartItem({ product }) {
+  const dispatch = useDispatch();
 
   const handleIncrease = () => {
-    setQuantity(quantity + 1);
+    dispatch(increaseQuantity({ id: product.id }));
   };
 
   const handleDecrease = () => {
-    setQuantity(quantity - 1);
+    dispatch(decreaseQuantity({ id: product.id }));
   };
 
-  const totalPrice = (product.price * quantity).toFixed(2);
+  const handleRemove = () => {
+    dispatch(deleteFromCart({ id: product.id }));
+  };
+
+  const totalPrice = (product.price * product.quantity).toFixed(2);
 
   return (
     <main className={styles.cartItem}>
@@ -30,19 +39,11 @@ function CartItem({ product, onRemove }) {
       </div>
 
       <div className={styles.quantitySection}>
-        <button
-          className={styles.quantityButton}
-          onClick={handleDecrease}
-          disabled={quantity <= 1}
-        >
+        <button className={styles.quantityButton} onClick={handleDecrease}>
           -
         </button>
-        <span className={styles.quantity}>{quantity}</span>
-        <button
-          className={styles.quantityButton}
-          onClick={handleIncrease}
-          disabled={quantity >= 10}
-        >
+        <span className={styles.quantity}>{product.quantity}</span>
+        <button className={styles.quantityButton} onClick={handleIncrease}>
           +
         </button>
       </div>
@@ -51,10 +52,7 @@ function CartItem({ product, onRemove }) {
         <span className={styles.price}>${totalPrice}</span>
       </div>
 
-      <button
-        className={styles.removeButton}
-        onClick={() => onRemove(product.id)}
-      >
+      <button className={styles.removeButton} onClick={handleRemove}>
         <Image src="/delete.png" alt="Delete" width={25} height={25} />
       </button>
     </main>

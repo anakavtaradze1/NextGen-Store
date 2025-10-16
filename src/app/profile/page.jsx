@@ -1,5 +1,10 @@
 import styles from "./profile.module.css";
 import Image from "next/image";
+import Logout from "../../components/logout/page";
+
+export const metadata = {
+  title: "Profile",
+};
 
 const ProfilePage = async () => {
   const response = await fetch("https://fakestoreapi.com/users/3");
@@ -42,6 +47,7 @@ const ProfilePage = async () => {
           {user.address.city}, {user.address.zipcode}
         </div>
       </address>
+      <Logout />
     </main>
   );
 };
