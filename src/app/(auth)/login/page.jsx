@@ -12,15 +12,12 @@ const schema = yup.object().shape({
     .string()
     .required("Username is required")
     .min(3, "Username must be at least 3 characters")
-    .max(10, "Username must be at most 10 characters"),
+    .max(15, "Username must be at most 15 characters"),
   password: yup
     .string()
     .required("Password is required")
     .min(5, "Password must be at least 5 characters")
-    .max(10, "Password must be at most 10 characters")
-    .matches(/[A-Z]/, "Must contain at least 1 uppercase letter")
-    .matches(/[a-z]/, "Must contain at least 1 lowercase letter")
-    .matches(/[0-9]/, "Must contain at least 1 number"),
+    .max(15, "Password must be at most 15 characters"),
 });
 
 const Login = () => {
