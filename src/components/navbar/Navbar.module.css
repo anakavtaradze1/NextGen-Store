@@ -96,12 +96,10 @@
   display: inline-block;
   margin-right: 10px;
 }
-
 .icon {
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
-
 .cartBadge {
   position: absolute;
   top: -8px;
@@ -121,7 +119,6 @@
 .activeTab .icon {
   animation: iconBounce 2s ease-in-out infinite;
 }
-
 .inactiveTab:hover .icon {
   transform: scale(1.15) rotate(10deg);
   filter: drop-shadow(0 3px 8px rgba(8, 40, 148, 0.3));
@@ -161,7 +158,6 @@
     margin-right: 0;
     margin-bottom: 4px;
   }
-
   .icon {
     width: 20px;
     height: 20px;
@@ -173,5 +169,11 @@
   }
   .inactiveTab:hover .icon {
     transform: scale(1.1);
+  }
+  .cartBadge {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    margin-top: 3px;
   }
 }

@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const ProfilePage = async () => {
-  const response = await fetch("https://fakestoreapi.com/users/3");
+  const response = await fetch("https://fakestoreapi.com/users/1");
   const user = await response.json();
 
   return (
