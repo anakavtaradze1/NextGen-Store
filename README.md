@@ -63,8 +63,8 @@ Make sure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/anakavtaradze1/midterm.git
-   cd midterm
+   git clone https://github.com/anakavtaradze1/NextGen-Store.git
+   cd NextGen-Store
    ```
 
 2. **Install dependencies**
@@ -91,7 +91,7 @@ Make sure you have the following installed:
 ## 📁 Project Structure
 
 ```
-📦 midterm/
+📦 NextGen-Store/
 ├── 📁 public/                 # Static assets
 │   ├── 🖼️ fav-icon.png       # Favicon
 │   └── 🖼️ icons/             # Navigation icons
@@ -183,7 +183,7 @@ Make sure you have the following installed:
 **Ana Kavtaradze**
 
 - GitHub: [@anakavtaradze1](https://github.com/anakavtaradze1)
-- Project: [E-Commerce App](https://github.com/anakavtaradze1/midterm)
+- Project: [E-Commerce App](https://github.com/anakavtaradze1/NextGen-Store)
 
 ---
 
